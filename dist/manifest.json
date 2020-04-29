@@ -21,9 +21,10 @@
     "persistent": true
   },
   "permissions": [
+    "activeTab",
     "cookies",
-    "https://*/*",
-    "http://*/*"
+    "https://*.medium.com/*",
+    "http://*.medium.com/*"
   ],
   "content_security_policy": "default-src 'self';",
   "content_scripts": [
