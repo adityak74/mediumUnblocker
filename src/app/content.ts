@@ -11,7 +11,7 @@ var checkReady = setInterval(() => {
         }, WAIT_TIME_MILLIS);
         var checkExist = setInterval(function() {
             const documentTreeString = document.documentElement.innerHTML;
-            if (documentTreeString.search('Read the rest of this story with a free account.') > -1) {
+            if (documentTreeString.search(/Read.*story.*with.*free.*account./g) > -1) {
                 clearInterval(checkExist);
                 chrome.runtime.sendMessage({ clearCookies: true });
             }
