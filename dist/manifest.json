@@ -24,13 +24,16 @@
     "activeTab",
     "cookies",
     "https://*.medium.com/*",
-    "http://*.medium.com/*"
+    "http://*.medium.com/*",
+    "https://*.uxdesign.cc/*",
+    "http://*.uxdesign.cc/*"
   ],
   "content_security_policy": "default-src 'self';",
   "content_scripts": [
     {
       "matches": [
-        "https://medium.com/*"
+        "https://medium.com/*",
+        "https://uxdesign.cc/*"
       ],
       "js": [
         "js/content.js"
