@@ -10,7 +10,7 @@
   "author": "",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@types/chrome": "0.0.155",
+    "@types/chrome": "0.0.157",
     "@types/react": "17.0.20",
     "@types/react-dom": "17.0.9",
     "css-loader": "6.2.0",
