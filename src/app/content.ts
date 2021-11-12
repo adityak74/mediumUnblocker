@@ -4,15 +4,18 @@ var KEEP_CHECKING = true;
 var COMPLETE = "complete";
 
 var checkReady = setInterval(() => {
+    console.log("Checking for content...");
     if (document.readyState === COMPLETE) {
         clearInterval(checkReady);
         setTimeout(function() {
             KEEP_CHECKING = false;
         }, WAIT_TIME_MILLIS);
         var checkExist = setInterval(function() {
-            const documentTreeString = document.documentElement.innerHTML;
-            if (documentTreeString.search(/Read.*story.*with.*free.*account./g) > -1) {
+            const documentTreeString = document.documentElement.innerHTML.toLowerCase();
+            console.log(documentTreeString);
+            if (documentTreeString.search(/read.*(more|story).*((with.*free.*account)|(everything.*on.*medium))./g) > -1) {
                 clearInterval(checkExist);
+                console.log("Medium is ready");
                 chrome.runtime.sendMessage({ clearCookies: true });
             }
             if (!KEEP_CHECKING) {

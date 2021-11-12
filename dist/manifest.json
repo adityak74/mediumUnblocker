@@ -1,7 +1,7 @@
 {
   "name": "MediumUnblocker",
-  "version": "1.0.0",
-  "manifest_version": 2,
+  "version": "1.0.1",
+  "manifest_version": 3,
   "description": "Extension to remove sign-up/login blocker for medium.com articles.",
   "homepage_url": "https://github.com/adityak74/mediumUnblocker",
   "icons": {
@@ -9,26 +9,25 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_title": "MU",
     "default_popup": "popup.html"
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-      "js/background.js"
-    ],
-    "persistent": true
+    "service_worker": "background.js"
   },
   "permissions": [
     "activeTab",
-    "cookies",
-    "https://*.medium.com/*",
-    "http://*.medium.com/*",
-    "https://*.uxdesign.cc/*",
-    "http://*.uxdesign.cc/*"
+    "cookies"
   ],
-  "content_security_policy": "default-src 'self';",
+  "host_permissions": [
+    "*://*.medium.com/*",
+    "*://*.uxdesign.cc/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self';"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -36,7 +35,7 @@
         "https://uxdesign.cc/*"
       ],
       "js": [
-        "js/content.js"
+        "content.js"
       ]
     }
   ]
