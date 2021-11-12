@@ -23,7 +23,8 @@
   ],
   "host_permissions": [
     "*://*.medium.com/*",
-    "*://*.uxdesign.cc/*"
+    "*://*.uxdesign.cc/*",
+    "*://*.gitconnected.com/*"
   ],
   "content_security_policy": {
     "extension_pages": "default-src 'self';"
@@ -32,7 +33,8 @@
     {
       "matches": [
         "https://medium.com/*",
-        "https://uxdesign.cc/*"
+        "https://uxdesign.cc/*",
+        "https://levelup.gitconnected.com/*"
       ],
       "js": [
         "content.js"

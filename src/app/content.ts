@@ -12,7 +12,6 @@ var checkReady = setInterval(() => {
         }, WAIT_TIME_MILLIS);
         var checkExist = setInterval(function() {
             const documentTreeString = document.documentElement.innerHTML.toLowerCase();
-            console.log(documentTreeString);
             if (documentTreeString.search(/read.*(more|story).*((with.*free.*account)|(everything.*on.*medium))./g) > -1) {
                 clearInterval(checkExist);
                 console.log("Medium is ready");
