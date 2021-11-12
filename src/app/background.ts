@@ -1,4 +1,4 @@
-const supportedWebsiteUrls = ['https://medium.com', 'https://uxdesign.cc'];
+const supportedWebsiteUrls = ['https://medium.com', 'https://uxdesign.cc', 'https://levelup.gitconnected.com'];
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     var currentTabUrl = new URL(sender.tab.url);

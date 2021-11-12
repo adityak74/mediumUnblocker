@@ -1,6 +1,6 @@
 {
   "name": "medium-unblocker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
   "author": "",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@types/chrome": "0.0.154",
-    "@types/react": "17.0.19",
+    "@types/chrome": "0.0.157",
+    "@types/react": "17.0.20",
     "@types/react-dom": "17.0.9",
     "css-loader": "6.2.0",
     "style-loader": "3.2.1",
