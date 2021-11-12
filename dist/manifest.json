@@ -26,7 +26,9 @@
     "https://*.medium.com/*",
     "http://*.medium.com/*",
     "https://*.uxdesign.cc/*",
-    "http://*.uxdesign.cc/*"
+    "http://*.uxdesign.cc/*",
+    "https://levelup.gitconnected.com/",
+    "https://levelup.gitconnected.com/*"
   ],
   "content_security_policy": "default-src 'self';",
   "content_scripts": [
